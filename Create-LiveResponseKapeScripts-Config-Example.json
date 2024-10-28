@@ -1,0 +1,36 @@
+{
+  "scriptOutputLocation": "C:\\temp\\IRSCripts",
+  "keyVaultUri": "https://example.vault.azure.net/",
+  "timeStampUri": "http://timestamp.digicert.com",
+  "kapeZipUri": "https://storageaccount.blob.core.windows.net/tools/kape.zip",
+  "storageAccounts": [
+    {
+      "storageAccountName": "Storage Account",
+      "storageAccountResourceGroup": "ForensicsRG"
+    }
+  ],
+  "azureSubscriptionName": "Test Subscription",
+  "KapeStringOptions": [
+    {
+      "Title": "SANS Triage",
+      "KapeString": "--tsource C --tdest C:\\temp\\KAPE\\toutput --target !SANS_Triage,WindowsDefenderQuarantine --vhdx $ENV:COMPUTERNAME --asu -----sasplaceholder---- --tflush --zv"
+    },
+    {
+      "Title": "Memory Image",
+      "KapeString": "--module Velocidex_WinPmem --mdest C:\\temp\\KAPE\\moutput --mflush --tflush --msource C:\\ --vhdx $ENV:COMPUTERNAME --asu -----sasplaceholder---- --zm --tflush --tsource C --tdest C:\\temp\\KAPE\\Kape\\toutput --target MemoryFiles"
+    },
+    {
+      "Title": "Hibernation File and Page File",
+      "KapeString": "--tflush --vhdx $ENV:COMPUTERNAME --asu -----sasplaceholder---- --zv --tflush --tsource C --tdest C:\\temp\\KAPE\\Kape\\toutput --target MemoryFiles"
+    },
+    {
+      "Title": "Custom Kape String",
+      "KapeString": "--asu -----sasplaceholder----"
+    }
+    ,
+    {
+      "Title": "Web Browser Data",
+      "KapeString": "--tsource C --tdest C:\\temp\\KAPE\\toutput --target WebBrowsers --vhdx $ENV:COMPUTERNAME --asu -----sasplaceholder---- --tflush --zv"
+    }
+  ]
+}

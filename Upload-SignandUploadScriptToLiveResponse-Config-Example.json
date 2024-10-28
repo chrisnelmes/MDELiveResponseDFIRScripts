@@ -1,0 +1,4 @@
+{
+    "keyVaultUri": "https://TESTKEYVALUT.vault.azure.net/",
+    "codeSigningCertName": "Certificate"
+}

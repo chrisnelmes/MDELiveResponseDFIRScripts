@@ -1,0 +1,13 @@
+{
+    "SubscriptionId": "1ea43c06-bdd8-4728-9c04-c1a0bea3ba7d",
+    "ResourceGroupName": "example-rg",
+    "Location": "CanadaCentral",
+    "StandardSize": "Standard_D4ads_v5",
+    "Vnet": "example-vn",
+    "Subnet": "example-sn",
+    "Nsg": "example-nsg",
+    "GalleryName": "examplegallery",
+    "ImageName": "forensicanalysismachine",
+    "SubscriptionName": "example Subscription",
+    "VMNamePrefix":"forensicvm"
+}
